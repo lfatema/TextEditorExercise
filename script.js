@@ -26,8 +26,8 @@ const makeUnderline = (elem) => {
 const alignText = (elem, alignType) => {
   document.getElementById("text-output").style.textAlign = alignType;
   let buttonList = document.getElementsByClassName("align");
-  for (let i = 0; i < buttonList.length; i++) {
-    buttonList[i].classList.remove("active");
-  }
+  buttonList.map((button) => {
+    button.classList.remove("active");
+  });
   elem.classList.add("active");
 };
