@@ -26,8 +26,11 @@ const makeUnderline = (elem) => {
 const alignText = (elem, alignType) => {
   document.getElementById("text-output").style.textAlign = alignType;
   let buttonList = document.getElementsByClassName("align");
-  buttonList.map((button) => {
+  for (let button of buttonList) {
     button.classList.remove("active");
-  });
+  }
+  // buttonList.map((button) => {
+  //   button.classList.remove("active");
+  // }); //arrays do not work on html elements and buttons are not array but html collection
   elem.classList.add("active");
 };
